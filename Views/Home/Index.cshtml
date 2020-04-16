@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+<h1 style="padding-left: 80px;">Enter Your Info</h1>
+<fieldset style="width: 360px;">
+    <form asp-action="submit" asp-controller="Home" method="post">
+    <div style="display: inline-block; width: 200px;">
+        <label asp-for="FirstName" style="display: block; margin-bottom:10px;">First Name:</label>
+        <span asp-validation-for="FirstName"></span>
+        <label asp-for="LastName" style="display: block; margin-bottom:10px;">Last Name:</label>
+        <span asp-validation-for="LastName"></span>
+        <label asp-for="Age" style="display: block; margin-bottom:10px;">Age:</label>
+        <span asp-validation-for="Age"></span>
+        <label asp-for="Email" style="display: block; margin-bottom:10px;">Email Address:</label>
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Password" style="display: block; margin-bottom:10px;">Password:</label>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div style="display: inline-block; width: 150px;">
+        <input type="text" asp-for="FirstName" style="display: block; margin-bottom:10px; height:24px;">
+        <input type="text" asp-for="LastName" style="display: block; margin-bottom:10px; height:24px;">
+        <input type="text" asp-for="Age" style="display: block; margin-bottom:10px; height:24px;">
+        <input type="eamil" asp-for="Email" style="display: block; margin-bottom:10px; height:24px;">
+        <input type="password" asp-for="Password" style="display: block; margin-bottom:10px; height:24px;">
+    </div>
+    <input value="Submit" type="submit">
+    </form>
+</fieldset>
